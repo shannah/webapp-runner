@@ -17,9 +17,27 @@ npm install -g runwar
 
 ### Usage
 
+**Simple Example** - Running war in embedded Tomcat on port 8080. 
+
 ```
 runwar myProject.war
+
 ```
+
+**Example Opening in Browser** - 
+
+```
+runwar myProject.war --open-in-browser
+
+```
+
+**Example Starting on Random open port**
+
+```
+runwar myProject.war --port=0 --open-in-browser
+
+```
+
 
 This is just a thin wrapper around webapp-runner.jar so all of the same command-line parameters are applicable.
 

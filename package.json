@@ -10,7 +10,7 @@
   "jdeploy": {"jar": "target/webapp-runner.jar"},
   "dependencies": {"shelljs": "^0.7.5"},
   "license": "Apache License, Version 2.0",
-  "name": "webapp-runner",
+  "name": "runwar",
   "files": ["jdeploy-bundle"],
   "scripts": {"test": "echo \"Error: no test specified\" && exit 1"},
   "keywords" : ["Tomcat", "War", "Java", "Runner"],
