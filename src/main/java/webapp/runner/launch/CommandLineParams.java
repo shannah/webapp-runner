@@ -19,6 +19,8 @@ public class CommandLineParams {
   @Parameter
   public List<String> paths = new ArrayList<String>();
 
+ 
+  
   @Parameter(names = "--session-timeout", description = "The number of minutes of inactivity before a user's session is timed out.")
   public Integer sessionTimeout;
 
@@ -31,6 +33,9 @@ public class CommandLineParams {
   @Parameter(names = "--path", description = "The context path")
   public String contextPath = "";
 
+  @Parameter(names = "--open-in-browser", description = "Opens the app in browser on start")
+  public boolean openInBrowser = false;
+  
   @Parameter(names = "--shutdown-override", description = "Overrides the default behavior and casues Tomcat to ignore lifecycle failure events rather than shutting down when they occur.")
   public boolean shutdownOverride = false;
 

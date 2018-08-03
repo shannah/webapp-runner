@@ -83,6 +83,12 @@ public class Main {
       commandLineParams.paths.add("src/main/webapp");
     }
 
+    if (commandLineParams.port == 0) {
+        java.net.ServerSocket sock = new java.net.ServerSocket(0);
+        commandLineParams.port = sock.getLocalPort();
+        sock.close();
+    }
+    
     final Tomcat tomcat = new Tomcat();
 
     // set directory for temp files
@@ -90,6 +96,8 @@ public class Main {
 
     // initialize the connector
     Connector nioConnector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
+    
+    System.out.println("Setting port to "+commandLineParams.port);
     nioConnector.setPort(commandLineParams.port);
 
     // Set connector attributes
@@ -272,6 +280,10 @@ public class Main {
 
     //start the server
     tomcat.start();
+    
+    if (commandLineParams.openInBrowser && java.awt.Desktop.isDesktopSupported()) {
+        java.awt.Desktop.getDesktop().browse(new URI("http://localhost:"+commandLineParams.port));
+    }
 
     /*
          * NamingContextListener.lifecycleEvent(LifecycleEvent event)
@@ -287,6 +299,7 @@ public class Main {
     commandLineParams = null;
 
     tomcat.getServer().await();
+    
   }
 
   /**

@@ -5,6 +5,24 @@ Webapp runner is designed to allow you to launch an exploded or compressed war t
 +  Tomcat 7: [tomcat7](https://github.com/jsimone/webapp-runner/tree/tomcat7) branch
 +  Tomcat 8: [master](https://github.com/jsimone/webapp-runner/tree/master) branch
 
+## runwar
+
+The [runwar](https://github.com/shannah/webapp-runner/tree/runwar) branch is a fork of the Tomcat 8 branch packaged and deployable using [npm](https://www.npmjs.com/).  It is intended to be used as a command-line tool for running war files.
+
+### Installation
+
+```
+npm install -g runwar
+```
+
+### Usage
+
+```
+runwar myProject.war
+```
+
+This is just a thin wrapper around webapp-runner.jar so all of the same command-line parameters are applicable.
+
 ## Usage
 
 ### Clone and Build

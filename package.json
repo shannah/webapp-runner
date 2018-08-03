@@ -1,0 +1,26 @@
+{
+  "bin": {"runwar": "jdeploy-bundle/jdeploy.js"},
+  "author": "Steve Hannah",
+  "description": "Embedded Tomcat Server to run war files",
+  "homepage" : "https://github.com/shannah/webapp-runner",
+  "main": "index.js",
+  "preferGlobal": true,
+  "repository": "https://github.com/shannah/webapp-runner",
+  "version": "1.0.0",
+  "jdeploy": {"jar": "target/webapp-runner.jar"},
+  "dependencies": {"shelljs": "^0.7.5"},
+  "license": "Apache License, Version 2.0",
+  "name": "webapp-runner",
+  "files": ["jdeploy-bundle"],
+  "scripts": {"test": "echo \"Error: no test specified\" && exit 1"},
+  "keywords" : ["Tomcat", "War", "Java", "Runner"],
+  "contributors" : [
+    { "name" : "John Simone"
+    , "email" : "john@heroku.com"
+    , "url" : "https://github.com/jsimone"
+    },
+    { "name" : "Joe Kutner"
+    , "email" : "jpkutner@gmail.com"
+    }
+  ]
+}
