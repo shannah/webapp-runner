@@ -6,7 +6,7 @@
   "main": "index.js",
   "preferGlobal": true,
   "repository": "https://github.com/shannah/webapp-runner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "jdeploy": {"jar": "target/webapp-runner.jar"},
   "dependencies": {"shelljs": "^0.7.5"},
   "license": "Apache License, Version 2.0",
